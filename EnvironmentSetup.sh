@@ -24,7 +24,7 @@ then
 	npm install -g ganache-cli
 
 else
-	echo "Syntax: ./IvanBootcampSetup.sh macos/linux."
+	echo "Syntax: ./EnvironmentSetup.sh macos/linux."
   	echo "OS supported: Mac OS | Linux"
 	fi
 
