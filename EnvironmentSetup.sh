@@ -1,5 +1,4 @@
 #!/bin/bash
-
 if [ "$1" = "macos" ] | [ "$1" = "linux" ]
 then
 	clear
@@ -18,18 +17,16 @@ then
 	if [ "$1" = "linux" ]
 	then
   		sudo apt-get install npm
-  fi
-  sudo npm install -g truffle@5.1.12
+  	fi
+	sudo npm install -g truffle@5.1.12
 
-  echo "Installing ganache-cli"
-  npm install -g ganache-cli
+	echo "Installing ganache-cli"
+	npm install -g ganache-cli
 
 else
-
-  echo "Syntax: ./IvanBootcampSetup.sh macos/linux."
-  echo "OS supported: Mac OS | Linux"
-
-fi
+	echo "Syntax: ./IvanBootcampSetup.sh macos/linux."
+  	echo "OS supported: Mac OS | Linux"
+	fi
 
 if [ "$1" = "linux" ] && [ "$2" = "-b" ]
 then
@@ -41,13 +38,10 @@ then
 	test -d /home/linuxbrew/.linuxbrew && eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
 	test -r ~/.bash_profile && echo "eval \$($(brew --prefix)/bin/brew shellenv)" >>~/.bash_profile
 	echo "eval \$($(brew --prefix)/bin/brew shellenv)" >>~/.profile
-
-
 fi
 
 if [ "$1" = "macos" ] && [ "$2" = "-b" ]
 then
-
-  echo "Installing HomeBrew"
-  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+	echo "Installing HomeBrew"
+	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 fi
